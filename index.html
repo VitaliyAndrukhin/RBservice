@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fullpage.min.css">
+    <link rel="stylesheet" href="build/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="fullPage">
+
+        <div id="navbar">
+            <div class="logo">
+                <p>RB</p>
+                <p>service</p>
+            </div>
+            <div class="menu">
+
+                <div class="contacts">
+                    <p>+38(099)*** ** **</p>
+                    <p>+38(093)*** ** **</p>
+                </div>
+
+                <div class="soc-webs">
+                    <img src="build/img/insta.png" alt="">
+                    <img src="build/img/fb.png" alt="">
+                </div>
+
+                <div class="menu-btns">
+
+                    <div class="menu-btn">
+                        МЕНЮ
+                    </div>
+
+                    <div class="burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="section s1">
+            <section class="s1-content">
+                <div class="info">
+                    <h1>Современные металлопластиковые<br> окна и двери</h1>
+                    <p>Большие окна стирают границы пространства и визуально расширяют его, а натуральный свет и лёгкость стеклянных форм - это тренды в архитектурном мире, которые никогда не потеряют актуальности.</p>
+                </div>
+                <a class="section-btn" href="#">Перейти в раздел</a>
+            </section>
+        </div>
+
+        <div class="section s2">
+            <section class="s2-content">
+                <div class="info">
+                    <h1>Подоконники</h1>
+                    <p>У нас пока нет текста о подоконниках, но когда мы его придумаем, то он будет, но пока его нет, вот так вот.</p>
+                </div>
+                <a class="section-btn" href="#">Перейти в раздел</a>
+            </section>
+        </div>
+
+        <section class="section s3">
+            <div class="s3-content">
+                <div class="info">
+                    <h1>Стеклопакеты</h1>
+                    <p>У нас пока нет текста о стеклопаетах, но когда мы его придумаем, то он будет, но пока его нет, вот так вот.</p>
+                </div>
+                <a class="section-btn" href="#">Перейти в раздел</a>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="fullpage.min.js"></script>
+    <script src="fullpage.js"></script>
+
+    <script>
+        new fullpage('#fullPage', {
+            autoScrolling: true,
+            navigation: true,
+            navigationPosition: 'left',
+            fixedElements: '#navbar',
+            afterRender: function() {
+                var pluginContainer = this;
+            },
+            anchors: ['okna', 'podokoniki', 'steklopaketi'],
+            navigationTooltips: ['Окна', 'Подоконники', 'Стеклопакеты'],
+            showActiveTooltip: true,
+            scrollingSpeed: 1000,
+            keyboardScrolling: true,
+            // onLeave: (origin, destination, direction) => {
+            //   const section = destination.item
+            //   const title = section.querySelector('h1')
+            //   const tl = new TimelineMax();
+            //   tl.fromTo(title,0.5, {y: '50', opacity: 0}, {y: 0, opacity: 1})
+            // }
+        })
+    </script>
+
+</body>
+
+</html>
